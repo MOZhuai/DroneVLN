@@ -1,0 +1,13 @@
+{
+  "Training":
+  {
+    "batch_size": 1,
+    "num_loaders": 0,
+    "lr": 0.001,
+    "weight_decay": 1e-6,
+    "use_scheduler": true,
+    "scheduler": "cosine",
+    "optimizer": "sgd",
+    "momentum": 0.9
+  }
+}

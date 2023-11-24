@@ -1,0 +1,11 @@
+{
+  "Environment":
+  {
+    "airsim_settings_path": "~/Documents/AirSim/settings.json",
+    "simulator_path": "~/vln-program/dataSets/drif/DroneSimulator/LinuxNoEditor/MyProject5.sh",
+    "sim_config_dir": "~/unreal_config/",
+    "config_dir": "/home/g21tka18/vln-program/dataSets/drif/unreal_config_nl/",
+    "real_drone": false,
+    "templates": false
+  }
+}

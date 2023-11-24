@@ -1,0 +1,77 @@
+{
+  "@include": [
+      "airsim/settings_corl_datacollect",
+      "environments/corl_18",
+      "include/setup_base",
+      "include/basic_carrot_planner",
+      "include/simple_carrot_planner",
+      "include/pomdp_interface",
+      "include/dynamics",
+      "include/units",
+      "include/models/corl",
+      "include/models/corl_aux",
+      "include/training/dagger",
+      "include/training/training",
+      "include/training/supervised",
+      "include/data/rollout_data"
+  ],
+
+  "Setup":
+  {
+    "model": "pvn_stage1",
+    "run_name": "spa_pvn_stage1",
+    "model_file_": "supervised_pvn_stage1_spa_pvn_stage1",
+    "model_type": "spa",
+    "num_workers": 1,
+    "cuda": true,
+    "max_envs": -1
+  },
+
+  "ModelPVN":
+  {
+    "train_action_from_dstar": false,
+    "run_action_from_dstar": false,
+    "action_in_path_only": false,
+    "action_recurrence": false,
+    "perturb_maps": true,
+    "run_auxiliaries": true,
+    "load_action_policy": false,
+    "action_policy_file": "corl/action_gtr/map_to_action_dag_action_gtr_dag99",
+    "compute_prior": false,
+    "use_prior_only": false,
+    "use_sbert": false,
+
+    "pathpred_in_channels": 64,
+    "emb_size": 30,
+
+    "aux":{
+      "class_map": true,
+      "grounding_map": true,
+      "lang": true,
+      "path": true,
+      "regularize_map": false
+    },
+
+    "spatial_transformers": {
+      "channels": 32,
+      "n_heads": 2,
+      "n_layers": 2,
+      "d_cond": 384,
+      "num_groups": 8,
+      "dropout": 0.1
+    }
+  },
+
+  "Training": {
+    "batch_size": 1,
+    "num_loaders": 0,
+    "use_scheduler": true,
+    "lr": 0.001,
+    "weight_decay": 5e-5,
+    "optimizer": "adamw"
+  },
+
+  "Supervised": {
+    "num_epochs": 20
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "Training":
+  {
+    "batch_size": 1,
+    "num_loaders": 0,
+    "use_scheduler": false,
+    "lr": 0.001,
+    "weight_decay": 5e-5,
+    "optimizer": "adamw"
+  }
+}

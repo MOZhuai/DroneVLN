@@ -1,0 +1,442 @@
+(pvnd) g21tka18@3090-221:~/proj/drif/scripts$ sh pretrain.sh
+Including params: airsim/settings_corl_datacollect
+Including params: environments/corl_18
+Including params: include/setup_base
+Including params: include/basic_carrot_planner
+Including params: include/simple_carrot_planner
+Including params: include/pomdp_interface
+Including params: include/dynamics
+Including params: include/units
+Including params: include/models/corl
+Including params: include/models/corl_aux
+Including params: include/training/dagger
+Including params: include/training/training
+Including params: include/training/supervised
+Including params: include/data/rollout_data
+Init model of type:  fpv_pretrain
+Perturbing maps:  True
+Trining only action:  False
+Detaching action gradients:  False
+UNet Channels: 32
+Feature Channels: 32
+Using auxiliary objectives:
+       - aux_class_map
+       - aux_grounding_map
+       - aux_lang_lm_nl
+       - aux_path_prior
+       - aux_path_posterior
+Loaded PyTorch model!
+Number of model parameters: 37392721
+Trainable model parameters: 37392720
+Loading data
+corpus:  2080
+corpus:  2080
+Loaded thesaurus with 1720 terms
+Training Model:
+Number of model parameters: 37392721
+Trainable model parameters: 37392720
+Use optimizer: adamw
+learning rate: 0.001
+Weight decay:  1e-06
+1 parameters frozen
+Beginning training...
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 9.400781631469727 epoch loss: 10.2347619039836212
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 8.566768646240234 epoch loss: 9.5697437519780548
+GOALS:  1232 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 0 train_loss: 10.23476190398362 test_loss: 9.569743751978054
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 7.386491775512695 epoch loss: 9.1892516108293884
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 7.131175994873047 epoch loss: 9.1070562161835246
+GOALS:  1395 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 1 train_loss: 9.189251610829388 test_loss: 9.107056216183524
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 6.69919490814209 epoch loss: 8.78034455052050754
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 7.725056171417236 epoch loss: 8.7396889233229271
+GOALS:  1493 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 2 train_loss: 8.780344550520507 test_loss: 8.739688923322927
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 8.259742736816406 epoch loss: 8.5321613419566411
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 7.371302604675293 epoch loss: 8.6588300344112694
+GOALS:  1478 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 3 train_loss: 8.532161341956641 test_loss: 8.658830034411269
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 8.450923919677734 epoch loss: 8.3632658500815521
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 7.466940402984619 epoch loss: 8.4581247213836127
+GOALS:  1616 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 4 train_loss: 8.363265850081552 test_loss: 8.458124721383612
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 10.340417861938477 epoch loss: 8.237810728569475
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 8.054586410522461 epoch loss: 8.4083446972560712
+GOALS:  1718 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 5 train_loss: 8.237810728569475 test_loss: 8.408344697256071
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 8.254804611206055 epoch loss: 8.1353364380641152
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 9.291003227233887 epoch loss: 8.3818361383356456
+GOALS:  1694 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 6 train_loss: 8.13533643806411 test_loss: 8.381836138335645
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 7.562285423278809 epoch loss: 8.0494697754444151
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 7.864002227783203 epoch loss: 8.3232387788400187
+GOALS:  1692 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 7 train_loss: 8.049469775444415 test_loss: 8.323238778840018
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 7.318470001220703 epoch loss: 7.97696311519138255
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 9.278701782226562 epoch loss: 8.3346557552287616
+GOALS:  1770 4041
+Epoch 8 train_loss: 7.97696311519138 test_loss: 8.334655755228761
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 10.67228889465332 epoch loss: 7.90464287975022645
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 7.476601600646973 epoch loss: 8.2777220747961154
+GOALS:  1711 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 9 train_loss: 7.904642879750226 test_loss: 8.277722074796115
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 5.247681617736816 epoch loss: 7.84737755986295345
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 6.928733825683594 epoch loss: 8.2404999515851578
+GOALS:  1769 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 10 train_loss: 7.84737755986295 test_loss: 8.240499951585157
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 8.752827644348145 epoch loss: 7.78766238648134755
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 7.183255195617676 epoch loss: 8.2754943042189671
+GOALS:  1755 4041
+Epoch 11 train_loss: 7.7876623864813475 test_loss: 8.275494304218967
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 11.951370239257812 epoch loss: 7.7300618826392126
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 7.267882823944092 epoch loss: 8.3776491262392963
+GOALS:  1548 4041
+Epoch 12 train_loss: 7.730061882639212 test_loss: 8.377649126239296
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 6.95797061920166 epoch loss: 7.681371768653443975
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 6.505705833435059 epoch loss: 8.2064092922139895
+GOALS:  1784 4041
+Saved model in: supervised_pvn_stage1_train_corl_pvn_stage1
+Epoch 13 train_loss: 7.681371768653443 test_loss: 8.206409292213989
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 6.800591468811035 epoch loss: 7.62964221131991824
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 10.161005020141602 epoch loss: 8.328386238204816
+GOALS:  1774 4041
+Epoch 14 train_loss: 7.629642211319918 test_loss: 8.328386238204816
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 8.184545516967773 epoch loss: 7.57982771744205685
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 7.434488773345947 epoch loss: 8.2864884878261352
+GOALS:  1768 4041
+Epoch 15 train_loss: 7.579827717442056 test_loss: 8.2864884878261
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 5.92670202255249 epoch loss: 7.528292878336209515
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 11.331696510314941 epoch loss: 8.297600897430518
+GOALS:  1798 4041
+Epoch 16 train_loss: 7.5282928783362095 test_loss: 8.297600897430518
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 7.242918491363525 epoch loss: 7.48264586545157945
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 5.424969673156738 epoch loss: 8.3102922099735816
+GOALS:  1812 4041
+Epoch 17 train_loss: 7.482645865451579 test_loss: 8.31029220997358
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 9.079147338867188 epoch loss: 7.43442380213116955
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 9.268511772155762 epoch loss: 8.2787199079385645
+GOALS:  1789 4041
+Epoch 18 train_loss: 7.434423802131169 test_loss: 8.278719907938564
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+PERTURBING MAPS!
+Filtered out 359 envs because of missing data
+ Batch:19056 / 19752 loss: 7.39457893371582 epoch loss: 7.381117891604714585
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 8.349969863891602 epoch loss: 8.4317342767146752
+GOALS:  1788 4041
+Epoch 19 train_loss: 7.381117891604714 test_loss: 8.43173427671467
+Saved pretrained weights: img_to_features
+Saved pretrained weights: lang_filter_map_grounding
+Saved pretrained weights: unet_posterior
+Saved pretrained weights: unet_prior
+Saved pretrained weights: sentence_embedding
+Saved pretrained weights: map_to_action
+Saved pretrained weights: aux_class_linear_2d_aux_class_map
+Saved pretrained weights: aux_class_linear_2d_aux_grounding_map
+Saved pretrained weights: aux_class_linear_aux_lang_lm_nl
+
+/home/g21tka18/miniconda3/envs/PVND/bin/python /home/g21tka18/mygit/drif/mains/train/train_supervised.py spa_sbert_train_stage1
+Including params: airsim/settings_corl_datacollect
+Including params: environments/corl_18
+Including params: include/setup_base
+Including params: include/basic_carrot_planner
+Including params: include/simple_carrot_planner
+Including params: include/pomdp_interface
+Including params: include/dynamics
+Including params: include/units
+Including params: include/models/corl
+Including params: include/models/corl_aux
+Including params: include/training/dagger
+Including params: include/training/training
+Including params: include/training/supervised
+Including params: include/data/rollout_data
+Init model of type:  fpv_pretrain
+=====================
+MODEL_TYPE: spa
+=====================
+Perturbing maps:  True
+Trining only action:  False
+Detaching action gradients:  False
+UNet Channels: 32
+Feature Channels: 32
+Using auxiliary objectives:
+       - aux_class_map
+       - aux_grounding_map
+       - aux_lang_lm_nl
+       - aux_path_prior
+       - aux_path_posterior
+Loaded PyTorch model!
+Loaded previous model:  supervised_pvn_stage1_train_corl_pvn_stage1
+Loading data
+corpus:  2080
+corpus:  2080
+Loaded thesaurus with 1720 terms
+Training Model:
+Number of model parameters: 37392721
+Trainable model parameters: 37392720
+========================
+  Use optimizer: adamw
+  learning rate: 0.001
+  Weight decay:  1e-06
+========================
+Beginning training...
+PERTURBING MAPS!
+Filtered out 83 envs because of missing data
+ Batch:4041 / 4177 loss: 6.356527328491211 epoch loss: 8.185045360191362 map_loss: 3.981789
