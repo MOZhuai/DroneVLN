@@ -42,11 +42,11 @@ This is the code repository for the following paper:
       ],
       "Setup":
       {
-        ...
-        "eval_env_set": "test", // "dev", "triplet", "gpt"
-        ...
-      },
-      ...
+        "eval_env_set": "test", 
+        "eval_env_set": "dev", 
+        "eval_env_set": "triplet", 
+        "eval_env_set": "gpt"
+      }
     }
     ```
 4. For models in other ablation experiments:
