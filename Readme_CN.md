@@ -1,5 +1,5 @@
 ### 项目配置
-1. 项目运行在ubuntu18.04，更新版本的系统可能无法运行无人机模拟器。
+1. 项目运行在ubuntu18.04，更新版本的系统可能无法运行模拟器。
 2. 安装pytorch, 项目中使用torch1.13:  
 `pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117`
 3. 安装其他python库:  
