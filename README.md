@@ -3,8 +3,8 @@
 This is the code repository for the following paper:
 "Vision-Language Navigation for Quadcopters with Conditional Transformer and Prompt-based Text Rephraser", Zhe Chen, Jiyi Li, Fumiyo Fukumoto, Peng Liu, Yoshimi Suzuki, Proceedings of the 2023 International Conference on ACM Multimedia Asia (MM Asia 2023)
 ### System Setup
-1. The project is running on Ubuntu 18.04.
-2. Install pytorch: 
+1. The project is running on `Ubuntu 18.04`.
+2. Install pytorch:  
 `pip install torch==1.13.1+cu117 torchvision==0.14.1+cu117 torchaudio==0.13.1 --extra-index-url https://download.pytorch.org/whl/cu117`
 3. Install other python library:  
 `pip install numpy scipy opencv-python msgpack-rpc-python multiprocess PyUserInput yattag sympy PySimpleGUI transforms3d scikit-image pandas tensorboardX matplotlib sentence-transformers tqdm visdom torchsummary blobfile nibabel opencv-python scikit-learn scikit-image matplotlib pandas batchgenerators yacs`
