@@ -5,6 +5,14 @@ import torch
 from drones.airsim_interface.units import DEPTH_SCALE
 
 
+def get_raw_images(images):
+    np_images = []
+    for i, image in enumerate(images):
+        np_image = np.asarray(image)
+        np_image = np_image.transpose([2, 0, 1])
+        np_images.append(np_image)
+    return np_images
+
 def standardize_images(np_images):
     images_out = []
     for i, image in enumerate(np_images):

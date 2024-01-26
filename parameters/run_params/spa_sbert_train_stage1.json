@@ -39,6 +39,7 @@
     "action_policy_file": "corl/action_gtr/map_to_action_dag_action_gtr_dag99",
     "compute_prior": false,
     "use_prior_only": false,
+    "emb_size": 384,
 
     "pathpred_in_channels": 64,
 
@@ -54,7 +55,8 @@
       "channels": 32,
       "n_heads": 2,
       "n_layers": 4,
-      "d_cond": 384,
+      "d_cond_": 384,
+      "d_cond": 512,
       "num_groups": 8,
       "dropout": 0.1
     }

@@ -192,3 +192,16 @@ class ModuleWithAuxiliaries(CudaModule):
         if total_loss is None:
             return 0
         return total_loss
+
+    def cal_cosine_loss(self, att1, att2):
+        val1 = self.inputs[att1]
+        val2 = self.inputs[att2]
+        if type(val1) == list:
+            val1 = torch.cat(val1, dim=0)
+        if type(val2) == list:
+            val2 = torch.cat(val2, dim=0)
+        similarity_scores = torch.nn.functional.cosine_similarity(val1, val2)
+        losses = torch.ones(similarity_scores.shape, dtype=torch.float32).to(similarity_scores.cuda())
+        losses = losses - similarity_scores
+        loss = losses.mean()
+        return loss

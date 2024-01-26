@@ -1,4 +1,4 @@
-name: drifv3
+name: dronevln
 channels:
   - defaults
 dependencies:

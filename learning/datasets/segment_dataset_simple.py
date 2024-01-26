@@ -12,7 +12,7 @@ from data_io.train_data import load_single_env_from_dataset, filter_env_list_has
 from env_config.definitions.landmarks import get_landmark_names
 from learning.inputs.sequence import pad_segment_with_nones, \
     sequence_list_to_tensor, none_padded_seq_to_tensor, instruction_sequence_batch_to_tensor
-from learning.inputs.vision import standardize_images, standardize_depth_images
+from learning.inputs.vision import standardize_images, standardize_depth_images, get_raw_images
 from learning.datasets.aux_data_providers import resolve_data_provider, get_aux_label_names, get_stackable_label_names
 
 from utils.dict_tools import dict_zip, dict_map
@@ -111,6 +111,9 @@ class SegmentDataset(Dataset):
 
         images_np = standardize_images(images_in)
         images = none_padded_seq_to_tensor(images_np)
+        # for clip
+        raw_images_np = get_raw_images(images_in)
+        raw_images = none_padded_seq_to_tensor(raw_images_np, type="int")
 
         depth_images_np = standardize_depth_images(images_in)
         depth_images = none_padded_seq_to_tensor(depth_images_np)
@@ -141,7 +144,8 @@ class SegmentDataset(Dataset):
             "stops": stops,
             "masks": mask,
             "flags": flag,
-            "md": md
+            "md": md,
+            "raw_imgs": raw_images
         }
 
         for aux_provider_name in self.aux_provider_names:
@@ -180,7 +184,7 @@ class SegmentDataset(Dataset):
         data_batch = dict_zip(list_of_samples)
 
         data_t = dict_map(data_batch, self.stack_tensors,
-                          ["images", "depth_images", "states", "actions", "stops", "masks"] + self.stackable_names)
+                          ["images", "depth_images", "states", "actions", "stops", "masks", "raw_imgs"] + self.stackable_names)
 
         if self.use_token:
             instructions_t, instruction_lengths = instruction_sequence_batch_to_tensor(data_batch["instr"])

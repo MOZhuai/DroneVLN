@@ -8,8 +8,9 @@ from learning.models.model_sm_rss_global import ModelTrajectoryTopDown as ModelR
 # import learning.models.model_sm_trajectory_ratio as mtpr
 # from learning.models.model_sm_trajectory_ratio_sbert import ModelTrajectoryTopDown as ModelTrajectoryProbRatio
 # import learning.models.model_sm_trajectory_ratio_sbert as mtpr
-from learning.models.model_sm_trajectory_ratio_sbert_spatialtrans_cot import \
-    ModelTrajectoryTopDown as ModelTrajectoryProbRatio
+# from learning.models.model_sm_trajectory_ratio_sbert_spatialtrans_cot import \
+#     ModelTrajectoryTopDown as ModelTrajectoryProbRatio
+from learning.models.model_spa_clip import ModelTrajectoryTopDown as ModelTrajectoryProbRatio
 import learning.models.model_sm_trajectory_ratio_sbert_spatialtrans_cot as mtpr
 from learning.models.supervised.top_down_path_goal_predictor_pretrain_batched import \
     ModelTopDownPathGoalPredictor as ModelTopDownPathGoalPredictorBatched

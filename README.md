@@ -66,3 +66,18 @@ The parameters of the model are located at `spa_sbert_*.json` in the dictionary 
 ### Others
 1. The trained model are saved in the dictionary "unreal_config_nl/EVALUATED_MODEL".
 2. The natural language instructions are stored in the file "unreal_config'nl/configs/tmp", and the JSON files in the folder represent different test instructions and environment configurations.
+
+### Issues
+1. Huggingface connection error. Solution: https://hf-mirror.com/
+   ```shell
+   pip install -U huggingface_hub
+   ```
+   ```shell
+   # way1
+   export HF_ENDPOINT=https://hf-mirror.com
+   python3 your_script.py
+   ```
+   ```shell
+   # way2
+   HF_ENDPOINT=https://hf-mirror.com python your_script.py
+   ```

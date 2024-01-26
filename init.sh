@@ -1,1 +1,3 @@
-export PYTHONPATH=$PYTHONPATH:$(pwd)
+#!/bin/bash
+export HF_ENDPOINT=https://hf-mirror.com
+#echo 'finished'

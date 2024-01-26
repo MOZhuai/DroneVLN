@@ -27,6 +27,7 @@ def dict_map(dict, f, keys=None):
     out_dict = dict
     if keys is not None:
         for key in keys:
+            # todo: if key is not in the dict
             item = dict[key]
             try:
                 out_dict[key] = f(item)

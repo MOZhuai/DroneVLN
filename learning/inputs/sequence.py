@@ -152,14 +152,25 @@ def sequence_list_to_masked_tensor(instructions):
     return instructions_v, mask_v
 
 
-def none_padded_seq_to_tensor(sequence, insert_batch_dim=False, cuda=False):
+def none_padded_seq_to_tensor(sequence, insert_batch_dim=False, cuda=False, type="float"):
     bs = len(sequence)
     size = [bs, *sequence[0].shape]
 
-    tensor_seq = torch.FloatTensor(*size).fill_(0)
+    if type == "float":
+        tensor_seq = torch.FloatTensor(*size).fill_(0)
+    elif type == "int":
+        tensor_seq = torch.IntTensor(*size).fill_(0)
+    else:
+        tensor_seq = torch.FloatTensor(*size).fill_(0)
+
     for i in range(bs):
         if sequence[i] is not None:
-            tensor_seq[i] = torch.from_numpy(sequence[i]).float()
+            if type == "float":
+                tensor_seq[i] = torch.from_numpy(sequence[i]).float()
+            elif type == "int":
+                tensor_seq[i] = torch.from_numpy(sequence[i])
+            else:
+                tensor_seq[i] = torch.from_numpy(sequence[i]).float()
         else:
             break
     if insert_batch_dim:

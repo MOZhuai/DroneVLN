@@ -15,7 +15,6 @@ class SentenceBert(ModuleBase):
         super(SentenceBert, self).__init__()
         self.last_output = None
         self.sentence_trans = SentenceTransformer('all-MiniLM-L12-v2')
-        # self.sentence_trans = SentenceTransformer('paraphrase-albert-small-v2')
 
     def init_weights(self):
         pass
